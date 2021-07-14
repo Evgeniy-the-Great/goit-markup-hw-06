@@ -317,10 +317,7 @@ span {
   fill: var(--accent-color);
 }
 
-.form-group textarea:focus,
-.form-group textarea:hover {
-  border-color: var(--accent-color);
-}
+
 
 .form-group textarea::placeholder {
 
@@ -338,6 +335,15 @@ span {
   resize: none;
   padding: 12px 16px;
   height: 120px;
+
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--transition-timing);
+}
+
+.form-group textarea:focus,
+.form-group textarea:hover {
+  border-color: var(--accent-color);
 }
 
 .form-btn {
